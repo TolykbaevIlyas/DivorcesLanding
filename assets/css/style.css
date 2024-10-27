@@ -45,3 +45,7 @@
   text-align: center;
   color: #645c55;
 }
+
+.title_photo {
+  background-image: url("../img/Frame.png");
+}
