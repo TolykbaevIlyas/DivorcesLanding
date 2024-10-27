@@ -48,4 +48,8 @@
 
 .title_photo {
   background-image: url("../img/Frame.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 600px;
+  width: 100%;
 }
