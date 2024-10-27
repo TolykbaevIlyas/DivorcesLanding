@@ -8,3 +8,40 @@
   padding-right: 2.5rem;
   min-height: 50px;
 }
+
+.intro {
+  display: flex;
+  background-color: #ece7e4;
+  min-height: 720px;
+  text-align: center;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.intro_content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  max-width: 417px;
+}
+
+.intro_text {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 110%;
+  text-align: center;
+  color: #1b1a1a;
+}
+
+.intro_additional-text {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #645c55;
+}
