@@ -55,7 +55,7 @@
 }
 
 .title_photo {
-  background-image: url("../img/Frame.png");
+  background-image: url("../img/Frame.jpg");
   background-size: cover;
   background-position: center;
   min-height: 600px;
@@ -70,6 +70,8 @@
   margin: 0 auto;
   padding-top: 63px;
   gap: 40px;
+  max-width: 736px;
+  margin: 0 auto;
 }
 
 .article_title {
