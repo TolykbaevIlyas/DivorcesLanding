@@ -1,12 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Пример Tailwind CSS</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <h1>Divorces LanidingPage</h1>
+    <main class="w-full">
+      <header
+        class="bg-[#292929] flex max-w-[1320px] m-auto max-sm:max-w-[350px] mt-2 p-5 border rounded-full border-none justify-between"
+      >
+        <div class="flex text-center items-center gap-10">
+          <div class="flex gap-10">
+            <h1 class="text-[24px] font-semibold">LOGO</h1>
+          </div>
+        </div>
+        <div class="hidden max-sm:flex max-sm:items-center">
+          <Burger />
+        </div>
+        <nav class="flex gap-20 max-sm:hidden">
+          <ul class="flex items-center gap-5">
+            <li>session</li>
+            <li>contacts</li>
+            <li>reviews</li>
+            <li>About me</li>
+          </ul>
+          <button class="ButtonMain">Contact me</button>
+        </nav>
+      </header>
+    </main>
   </body>
 </html>
