@@ -94,7 +94,7 @@
   padding-left: 20px; /* Отступ, чтобы текст не прилипал к линии */
 }
 
-.with-line::before {
+/* .with-line::before {
   content: "";
   position: absolute;
   left: 370px;
@@ -102,4 +102,4 @@
   width: 1px; /* Толщина линии */
   height: 100%; /* Высота линии */
   background-color: #000; /* Цвет линии */
-}
+} */
