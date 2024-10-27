@@ -101,7 +101,50 @@
   position: absolute;
   left: 370px;
   top: 0;
-  width: 1px; /* Толщина линии */
-  height: 100%; /* Высота линии */
-  background-color: #000; /* Цвет линии */
-} */
+  width: 1px; 
+  height: 100%; 
+  background-color: #000; 
+} 
+*/
+
+.image-scroll-container {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.year-display {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: black;
+  font-size: 2rem;
+  text-align: left;
+  opacity: 1;
+  z-index: 2;
+}
+
+.image-sequence {
+  display: flex;
+  justify-content: center; /* Горизонтальное выравнивание */
+  align-items: center; /* Вертикальное выравнивание */
+  height: 100%; /* Высота блока на 100% */
+  position: relative;
+}
+
+.image {
+  max-width: 736px;
+  max-height: 100%; /* Убедиться, что изображение вписывается в контейнер */
+  width: auto;
+  height: auto;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  position: absolute; /* Для перекрытия друг друга */
+}
+
+.image.active {
+  opacity: 1; /* Показать активное изображение */
+}
