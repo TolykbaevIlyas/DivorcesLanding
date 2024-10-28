@@ -149,7 +149,7 @@ html, body {
 }
 
 /* Изображения с плавным переходом и полной высотой */
-.map-image {
+/* .map-image {
   opacity: 0;
   transition: opacity 1s ease;
   width: auto;
@@ -158,6 +158,23 @@ html, body {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.map-image.active {
+  opacity: 1;
+} */
+
+.map-image {
+  width: 100%;
+  height: auto;
+  max-height: 100vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover; /* Масштабирует изображение без искажения пропорций */
+  transition: opacity 1s ease;
+  opacity: 0;
 }
 
 .map-image.active {
@@ -201,6 +218,10 @@ html, body {
     padding-top: 40px;
     gap: 30px;
   }
+  .map-image {
+    width: 90%; /* Ограничение ширины для планшетов */
+    max-height: 80vh;
+  }
 }
 
 /* Адаптация для мобильных устройств (до 480px) */
@@ -239,7 +260,8 @@ html, body {
   }
 
   .map-image {
-    height: 50vh;
+    width: 100%;
+    max-height: 70vh;
   }
 }
 
@@ -258,6 +280,7 @@ html, body {
   }
 
   .map-image {
+    width: auto;
     height: 100vh;
   }
 }
