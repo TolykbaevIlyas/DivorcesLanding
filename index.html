@@ -19,11 +19,12 @@
           <div class="flex gap-10">
             <h1 class="text-[24px] font-semibold">LOGO</h1>
           </div>
+          <button class="sm:hidden" id="burgerButton">☰</button>
         </div>
         <div class="hidden max-sm:flex max-sm:items-center">
           <Burger />
         </div>
-        <nav class="flex gap-20 max-sm:hidden">
+        <nav class="nav flex gap-20 sm:hidden">
           <ul class="flex items-center gap-5">
             <li>session</li>
             <li>contacts</li>
@@ -36,10 +37,7 @@
       <section class="intro min-h-[720px]">
         <div class="intro_content">
           <h5 class="intro_additional-text">Wishbone+Partners</h5>
-          <h1 class="intro_text">Қазақстандағы ажырасулар саны</h1>
-          <h5 class="intro_additional-text">
-            15.10.2024 | DivorcesNews | Send rewiew
-          </h5>
+          <h1 class="intro_text">Қазақстандағы ажырасулар</h1>
         </div>
       </section>
 
@@ -49,70 +47,50 @@
       </p>
 
       <section class="article with-line">
-        <h4 class="article_title">Article text</h4>
-        <hr align="center" width="900" size="2" color="#000" class="line" />
+        <h4 class="article_title">Қазақстандағы ажырасу статистикасы</h4>
+        <hr align="center" width="200" size="2" color="#000" class="line" />
         <p class="article_text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti a
-          hic fuga perferendis quas corporis, vel error nostrum, aut ipsam
-          repellendus, eos saepe eveniet reprehenderit. Velit enim repudiandae
-          officiis cum. Minima, ipsa molestias? Iure atque dolor aliquam
-          mollitia quaerat, id exercitationem sed rem illum harum dignissimos
-          eveniet eius ex consectetur culpa molestiae. Animi saepe corrupti
-          doloribus cupiditate eum quam culpa. Rerum debitis ab laboriosam
-          voluptatem officiis? Dolorem ipsum iusto cupiditate corrupti nobis
-          asperiores quibusdam sapiente quasi expedita, blanditiis tenetur ab,
-          iure omnis. Obcaecati laborum magni corrupti autem corporis. Incidunt,
-          et. Sit ipsam sequi inventore dignissimos. Quia saepe commodi quos
-          nisi provident ut itaque nam quis et eum minima fugit praesentium,
-          ipsam ipsum, nostrum assumenda quod architecto deserunt. Quia, sequi
-          ipsum. Soluta architecto voluptatem officia. Optio dicta recusandae id
-          quibusdam esse quas illum voluptate aliquam obcaecati facere
-          aspernatur numquam eveniet corrupti pariatur iusto cum eos maxime,
-          laboriosam beatae.
+          Қоғам үшін ең өзекті мәселелердің бірі - ажырасу. Соңғы жылдары елімізде осы мәселе көпшілікті алаңдатып, түрлі таластар тудырғаны бәрімізге мәлім.
+          Отбасы құндылықтарын бәрінен биік қойған қазақ қоғамы үшін ажырасудың көбеюі үлкен індетпен тең. Шынында да кейінгі кезде құндылықтар ауысып, жауапкершілік жоғалып, шаңырақ шайқалуы оп-оңай болып­ кетті. 
+          Неке бұзылуының дәл осындай жоғары деңгейге жетуіне себеп аз емес. Дегенмен ең жиі кездесетін себептерді атап өтуге болады. Олар мыналар: 
+          <ul class="list-decimal">
+            <li> Тұрмыстық зорлық-зомбылық;</li>
+            <li>Ер не әйелдің ішімдікке салынуы;</li>
+            <li>Ер не әйелдің есірткіге салынуы;</li>
+            <li>Ер не әйелдің құмар ойынға тәуелді болуы; </li>
+            <li>Ер не әйелдің көзге шөп салуы; </li>
+            <li>Ер не әйелдің туыстарының олардың ортасына түсуі;</li>
+            <li>Қаржылық жағдайдың қиындауы.  </li> 
+          </ul>               
+          Міне, негізгі себептері осындай болған ажырасудың сандық көрсеткішін қарастырсақ.
         </p>
         <h4 class="article_title">Диаграмма</h4>
-        <hr align="center" width="900" size="2" color="#000" class="line" />
+        <hr align="center" width="200" size="2" color="#000" class="line" />
         <img src="./assets/img/diagramm.png" />
         <p class="article_text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti a
-          hic fuga perferendis quas corporis, vel error nostrum, aut ipsam
-          repellendus, eos saepe eveniet reprehenderit. Velit enim repudiandae
-          officiis cum. Minima, ipsa molestias? Iure atque dolor aliquam
-          mollitia quaerat, id exercitationem sed rem illum harum dignissimos
-          eveniet eius ex consectetur culpa molestiae. Animi saepe corrupti
-          doloribus cupiditate eum quam culpa. Rerum debitis ab laboriosam
-          voluptatem officiis? Dolorem ipsum iusto cupiditate corrupti nobis
-          asperiores quibusdam sapiente quasi expedita, blanditiis tenetur ab,
-          iure omnis. Obcaecati laborum magni corrupti autem corporis. Incidunt,
-          et. Sit ipsam sequi inventore dignissimos. Quia saepe commodi quos
-          nisi provident ut itaque nam quis et eum minima fugit praesentium,
-          ipsam ipsum, nostrum assumenda quod architecto deserunt. Quia, sequi
-          ipsum. Soluta architecto voluptatem officia. Optio dicta recusandae id
-          quibusdam esse quas illum voluptate aliquam obcaecati facere
-          aspernatur numquam eveniet corrupti pariatur iusto cum eos maxime,
-          laboriosam beatae.
+          Ақпарат әлемінен алыс, сенімді мәліметтен хабардар емес адамдар ажырасудың өзінше статистикасын ұсынып жүр. ҚР Ұлттық статистика бюросының  деректеріне жүгінсек, өткен жылы елімізде  АХАТ органдары Қазақстан Республикасында 120,8 мың некені тіркеген. Бұл алдыңғы жылмен салыстырғанда 5,9% аз. Некенің сақталуына келер болсақ, олардың саны 2022 жылмен салыстырғанда 9,6% азайып, 40,2 мыңды құраған екен. 
         </p>
-        <div>
+        <!-- <div>
           <img src="./assets/img/articleImg1.jpeg" />
           <p class="text-center">
             https://terryandrobertslaw.com/blog/top-reasons-for-divorce/
           </p>
-        </div>
+        </div> -->
       </section>
 
-      <section class="image-scroll-container">
+      <div class="sticky-container">
+        <!-- Контейнер для отображения года -->
         <div class="year-display">2017</div>
-        <!-- Элемент для отображения года -->
-        <div class="image-sequence">
-          <img src="./assets/img/map1.png" alt="Image 1" class="image active" />
-          <img src="./assets/img/map2.png" alt="Image 2" class="image" />
-          <img src="./assets/img/map3.png" alt="Image 3" class="image" />
-          <img src="./assets/img/map4.png" alt="Image 4" class="image" />
+      
+        <div class="sticky-content">
+          <img src="./assets/img/map1.png" class="map-image active" alt="Map 1" />
+          <img src="./assets/img/map2.png" class="map-image" alt="Map 2" />
+          <img src="./assets/img/map3.png" class="map-image" alt="Map 3" />
+          <img src="./assets/img/map4.png" class="map-image" alt="Map 4" />
         </div>
-      </section>
+      </div>
       <section class="article">
-        <img src="./assets/img/articleImg3.jpeg" />
-        <p class="text-center">https://islam.ru/content/obshestvo/40923</p>
+        <p class="article_text">Тұрғылықты жеріне зер салар болсақ, қалалық жерлерде ажырасуға өтініш көп берілген. Мәселен, қалалық жерлерде 29,4 мың ажырасу (73,1%), ауылдық жерлерде 10,8 мың ажырасу (26,9%) тіркелген. Қалалар бойынша Алматы, Астана, Қарағанды қалалары көш бастап тұр. </p>
       </section>
     </main>
 

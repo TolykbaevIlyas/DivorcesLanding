@@ -1,72 +1,36 @@
-const images = document.querySelectorAll(".image");
-const imageContainer = document.querySelector(".image-scroll-container");
-const yearDisplay = document.querySelector(".year-display");
+document.addEventListener("DOMContentLoaded", () => {
+  const images = document.querySelectorAll('.map-image');
+  const stickyContainer = document.querySelector('.sticky-container');
+  const yearDisplay = document.querySelector('.year-display');
+  const years = [2017, 2019, 2021, 2023]; // Массив с годами
+  const imageCount = images.length;
 
-let currentIndex = 0;
-let scrollPosition = 0; // Текущая накопленная позиция скролла
-const threshold = 200; // Количество пикселей для смены картинки
+  const totalScrollHeight = stickyContainer.offsetHeight - window.innerHeight;
 
-// Массив с годами для отображения
-const years = ["2017", "2019", "2021", "2023"];
+  function checkScroll() {
+    const containerTop = stickyContainer.getBoundingClientRect().top;
 
-// Флаг для блокировки скролла всей страницы
-let blockPageScroll = true;
+    const scrollFraction = Math.abs(containerTop) / totalScrollHeight;
+    const activeIndex = Math.min(
+      Math.floor(scrollFraction * imageCount),
+      imageCount - 1
+    );
 
-// Функция для обновления изображения и года
-function updateImage(index) {
-  images.forEach((img, i) => {
-    img.classList.toggle("active", i === index);
-  });
-  yearDisplay.textContent = years[index];
-}
-
-// Функция для обработки скролла внутри контейнера
-function handleScroll(event) {
-  // Блокируем скролл всей страницы, если flag активен
-  if (blockPageScroll) event.preventDefault();
-
-  scrollPosition += event.deltaY;
-
-  // Обработка скролла вниз
-  if (scrollPosition >= threshold && currentIndex < images.length - 1) {
-    currentIndex++;
-    updateImage(currentIndex);
-    scrollPosition = 0;
-
-    // Обработка скролла вверх
-  } else if (scrollPosition <= -threshold && currentIndex > 0) {
-    currentIndex--;
-    updateImage(currentIndex);
-    scrollPosition = 0;
-  }
-
-  // Разблокируем прокрутку страницы, если достигнута последняя картинка
-  if (currentIndex === images.length - 1) {
-    blockPageScroll = false;
-    imageContainer.style.overflow = "auto"; // Разрешаем скролл страницы
-  } else {
-    blockPageScroll = true;
-    imageContainer.style.overflow = "hidden"; // Блокируем скролл страницы
-  }
-}
-
-// Добавляем обработчик скролла
-imageContainer.addEventListener("wheel", handleScroll, { passive: false });
-
-// IntersectionObserver для сброса состояния при входе в блок
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        currentIndex = 0; // Сброс к первой картинке
-        updateImage(currentIndex);
-        scrollPosition = 0; // Сброс накопленного скролла
-        blockPageScroll = true; // Блокируем прокрутку страницы
-        imageContainer.style.overflow = "hidden"; // Блокируем прокрутку внутри контейнера
-      }
+    // Обновляем отображение года и изображений
+    images.forEach((img, index) => {
+      img.classList.toggle('active', index === activeIndex);
     });
-  },
-  { threshold: 0.5 }
-);
+    yearDisplay.textContent = years[activeIndex];
 
-observer.observe(imageContainer);
+    requestAnimationFrame(checkScroll);
+  }
+
+  requestAnimationFrame(checkScroll);
+});
+
+const burgerButton = document.getElementById('burgerButton');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  burgerButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });

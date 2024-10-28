@@ -107,44 +107,157 @@
 } 
 */
 
-.image-scroll-container {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.container {
+  width: 100%;
+}
+
+.section {
   height: 100vh;
-  position: relative;
-  overflow: hidden;
-  background-color: transparent;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.year-display {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  color: black;
-  font-size: 2rem;
-  text-align: left;
-  opacity: 1;
-  z-index: 2;
-}
-
-.image-sequence {
   display: flex;
-  justify-content: center; /* Горизонтальное выравнивание */
-  align-items: center; /* Вертикальное выравнивание */
-  height: 100%; /* Высота блока на 100% */
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  background-color: #eaeaea;
+  border: 1px solid #ccc;
+}
+
+/* Sticky-контейнер */
+.sticky-container {
   position: relative;
+  height: 300vh; /* Длина скролла */
 }
 
-.image {
-  max-width: 736px;
-  max-height: 100%; /* Убедиться, что изображение вписывается в контейнер */
-  width: auto;
-  height: auto;
+/* Sticky content для центрирования картинок */
+.sticky-content {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Изображения с плавным переходом и полной высотой */
+.map-image {
   opacity: 0;
-  transition: opacity 0.8s ease-in-out;
-  position: absolute; /* Для перекрытия друг друга */
+  transition: opacity 1s ease;
+  width: auto;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.image.active {
-  opacity: 1; /* Показать активное изображение */
+.map-image.active {
+  opacity: 1;
+}
+
+/* Стили для отображения года */
+.year-display {
+  position: fixed;
+  top: 140px;
+  left: 20px;
+  font-size: 2em;
+  color: #333;
+  font-weight: bold;
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .nav{
+    display: none;
+    visibility: hidden;
+  }
+  .intro {
+    flex-direction: column;
+    min-height: 500px;
+  }
+
+  .intro_text {
+    font-size: 48px;
+  }
+
+  .intro_content {
+    gap: 30px;
+  }
+
+  .article_title {
+    font-size: 28px;
+  }
+
+  .article {
+    padding-top: 40px;
+    gap: 30px;
+  }
+}
+
+/* Адаптация для мобильных устройств (до 480px) */
+@media (max-width: 480px) {
+  .intro {
+    padding: 20px;
+    min-height: 400px;
+  }
+
+  .intro_text {
+    font-size: 32px;
+  }
+
+  .intro_content {
+    max-width: 100%;
+    gap: 20px;
+  }
+
+  .ButtonMain {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    min-height: 40px;
+  }
+
+  .article {
+    padding-top: 30px;
+  }
+
+  .article_title {
+    font-size: 24px;
+  }
+
+  .year-display {
+    font-size: 1.5em;
+    top: 100px;
+  }
+
+  .map-image {
+    height: 80vh;
+  }
+}
+
+/* Адаптация для широких экранов (больше 1200px) */
+@media (min-width: 1200px) {
+  .intro_text {
+    font-size: 72px;
+  }
+
+  .intro_additional-text {
+    font-size: 16px;
+  }
+
+  .article_title {
+    font-size: 36px;
+  }
+
+  .map-image {
+    height: 100vh;
+  }
 }
