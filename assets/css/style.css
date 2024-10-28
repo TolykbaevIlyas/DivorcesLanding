@@ -249,7 +249,7 @@ html, body {
 }
 
 /* Адаптация для мобильных устройств (до 480px) */
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
   .intro {
     padding: 20px;
     min-height: 400px;
@@ -284,6 +284,41 @@ html, body {
   }
 
   .map-image {
+    width: 100%;
+    max-height: 70vh;
+  }
+} */
+
+@media (max-width: 480px) {
+  .intro {
+    padding: 20px;
+    min-height: 400px;
+  }
+
+  .intro_text {
+    font-size: 32px;
+  }
+
+  .intro_content {
+    max-width: 100%;
+    gap: 20px;
+  }
+
+  .ButtonMain {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    min-height: 40px;
+  }
+
+  .article {
+    padding-top: 15px; /* уменьшенный отступ сверху */
+    padding-bottom: 10px; /* уменьшенный отступ снизу */
+    gap: 20px; /* уменьшение промежутка между элементами */
+  }
+
+  .map-image {
+    margin-top: 0; /* убрать верхний отступ */
+    margin-bottom: 10px; /* уменьшенный нижний отступ */
     width: 100%;
     max-height: 70vh;
   }
