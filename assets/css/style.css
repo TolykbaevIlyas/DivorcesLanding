@@ -1,6 +1,16 @@
 .main {
-  height: 3000px;
+  height: 3500px;
 }
+
+html {
+  -webkit-text-size-adjust: 100%; /* Отключает автоматическое масштабирование текста */
+}
+
+.sticky-content {
+  position: -webkit-sticky; /* Для Safari */
+  position: sticky;
+}
+
 
 .ButtonMain {
   border-radius: 9999px;
@@ -11,6 +21,20 @@
   padding-left: 2.5rem;
   padding-right: 2.5rem;
   min-height: 50px;
+}
+
+.ButtonMain {
+  -webkit-border-radius: 9999px; /* Safari */
+  border-radius: 9999px;
+  background-color: rgba(0, 0, 0, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+.intro {
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  -webkit-align-items: center; /* Safari */
+  align-items: center;
 }
 
 .line {
@@ -37,8 +61,8 @@
 .intro_text {
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 64px;
-  line-height: 110%;
+  font-size: 2rem; /* Используйте rem вместо px для лучшей адаптивности */
+  line-height: 1.4;
   text-align: center;
   color: #1b1a1a;
 }
